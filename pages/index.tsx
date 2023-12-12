@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Hanbyeol Kwon | Full-stack Developer</title>
       </Head>
-      <main className="w-full h-screen font-bodyFont bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll -y-scroll scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60">
+      <main className="w-full font-bodyFont bg-bodyColor text-textLight">
         <Navbar />
         <div className="w-full flex flex-col items-center mx-auto px-4">
           <Hero />
