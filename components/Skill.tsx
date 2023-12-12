@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion, useScroll } from 'framer-motion';
 import SectionTitle from './SectionTitle';
 import Frontend from './skills/Frontend';
 import Backend from './skills/Backend';
@@ -7,7 +8,7 @@ import Tools from './skills/Tools';
 
 const Skill = () => {
   const [selectedSkill, setSelectedSkill] = useState("Frontend");
-  const handleSkilSelection = (category) => {
+  const handleSkilSelection = (category: any) => {
     setSelectedSkill(category);
   }
   const categories = [
@@ -17,19 +18,23 @@ const Skill = () => {
     { title: "Tools", component: <Tools /> },
   ]
   return (
-    <section className='max-x-containerxs mx-auto py-10 lgl:py-24 px-4' id='skill'>
-      <SectionTitle title="Technologies I've worked with" titleNo="02" />
+    <motion.section
+      id='skill'
+      className='max-x-containerxs mx-auto py-10 lgl:py-24 px-4'
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+    >
+      <SectionTitle title="Technologies I've worked with" titleNo="02" className='' />
       <div className='h-[88vh] w-full mt-10 flex flex-col md:flex-row gap-16'>
         <ul className="md:w-32 flex flex-col">
           {categories.map((category) => (
             <li
               key={category.title}
               onClick={() => handleSkilSelection(category.title)}
-              className={`${
-                selectedSkill === category.title
-                  ? "border-l-textGreen text-textGreen"
-                  : "border-l-hoverColor text-textDark"
-              } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
+              className={`${selectedSkill === category.title
+                ? "border-l-textGreen text-textGreen"
+                : "border-l-hoverColor text-textDark"
+                } border-l-2 bg-transparent hover:bg-[#112240] py-3 text-sm  cursor-pointer duration-300 px-8 font-medium`}
             >
               {category.title}
             </li>
@@ -37,7 +42,7 @@ const Skill = () => {
         </ul>
         {categories.find((category) => category.title === selectedSkill)?.component}
       </div>
-    </section>
+    </motion.section>
   )
 }
 
