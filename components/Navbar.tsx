@@ -10,7 +10,12 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='w-full h-15 lg:h-[9vh] sticky top-0 z-50 bg-bodyColor px-4'>
+    <motion.div
+      className='w-full h-15 lg:h-[9vh] sticky top-0 z-50 bg-bodyColor px-4'
+      initial={{ y: -10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className='max-w-container h-full mx-auto py-1 font-titleFont flex items-center'>
         <div className='hidden mdl:inline-flex items-center gap-7 mx-auto'>
           <ul className='flex text-[13px] gap-7'>
@@ -20,13 +25,9 @@ const Navbar = () => {
                 href={url}
                 className='flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
               >
-                <motion.li
-                  initial={{ y: -10, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.1, delay: 0.15 * (i) }}
-                >
+                <li>
                   <span className="text-textGreen">0{i + 1}. </span>{title}
-                </motion.li>
+                </li>
               </Link>
             ))}
           </ul>
@@ -37,7 +38,7 @@ const Navbar = () => {
           <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-1 group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
