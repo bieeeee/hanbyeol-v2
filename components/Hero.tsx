@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
+import SectionTitle from './SectionTitle';
 
 const Hero = () => {
-  const line1 = "Hey, my name is Hanbyeol Kwon. I'm a passionate developer who appreciates clean code and aesthetic UI design. Currently, I'm focused on learning performance optimization techniques and exploring new technologies.";
+  const line1 = "Hi, my name is Hanbyeol Kwon. I'm a passionate developer who appreciates clean code and aesthetic UI design. Currently, I'm focused on learning performance optimization techniques and exploring new technologies.";
   const sentence = {
     hidden: { opacity: 1 },
     visible: {
@@ -23,16 +24,19 @@ const Hero = () => {
   return (
     <section
       id='about'
-      className='max-w-contentContainer mx-auto items-center justify-center h-[85vh] lg:h-[91vh] py-10 mdl:py-24 flex flex-col gap-4 lgl:gap-8 mdl:px-10 xl:px-4'
+      className='max-w-contentContainer flex mx-auto h-[85vh] lg:h-[91vh] py-10 mdl:py-24 mdl:px-10 xl:px-4'
     >
-      <div className="max-w-[800px] mx-auto text-4xl font-bold text-center">
-        <motion.h1 variants={sentence} initial="hidden" animate="visible">
-          {line1.split("").map((char, i) => (
-            <motion.span key={char + "-" + i} custom={i} variants={letter}>
-              {char}
-            </motion.span>
-          ))}
-        </motion.h1>
+      <div className="flex items-center justify-start">
+        <SectionTitle titleNo='01' title='About Me' className='rotate-90 whitespace-nowrap text-base w-[100px]' />
+        <div className="max-w-[800px] mx-auto text-4xl font-bold text-left">
+          <motion.h1 variants={sentence} initial="hidden" animate="visible">
+            {line1.split("").map((char, i) => (
+              <motion.span key={char + "-" + i} custom={i} variants={letter}>
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
       </div>
     </section>
   )
