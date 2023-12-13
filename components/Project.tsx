@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import SectionTitle from './SectionTitle'
 import { Card } from './Card'
+import {ProjectItem} from './ProjectItem'
 
 const Project = () => {
   return (
@@ -17,12 +18,9 @@ const Project = () => {
         }}>
         <SectionTitle title="Things I've built" titleNo="03" className='' />
         <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {ProjectItem.map((item)=> (
+            <Card key={item.id} project={item}/>
+          ))}
         </div>
       </motion.div>
     </section>
