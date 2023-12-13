@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import SectionTitle from './SectionTitle';
-import Frontend from './skills/Frontend';
-import Backend from './skills/Backend';
-import Database from './skills/Database';
-import Tools from './skills/Tools';
+import dynamic from 'next/dynamic';
+const Frontend = dynamic(() => import('./skills/Frontend'));
+const Backend = dynamic(() => import('./skills/Backend'));
+const Database = dynamic(() => import('./skills/Database'));
+const Tools = dynamic(() => import('./skills/Tools'));
 
 const Skill = () => {
   const [selectedSkill, setSelectedSkill] = useState("Frontend");
