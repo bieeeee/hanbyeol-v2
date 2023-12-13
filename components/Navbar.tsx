@@ -1,13 +1,30 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useRef, useState } from 'react';
 
 const Navbar = () => {
+  const ref = useRef<string | any>("");
+  const [show, setShow] = useState(false);
   const navItems = [
     ['About', '#about'],
     ['Skill', '#skill'],
     ['Project', '#project'],
     ['Contact', '#contact'],
   ];
+  const handleScroll = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    const el = document.getElementById(targetId);
+    el?.scrollIntoView({
+      behavior: "smooth"
+    })
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach((link)=>{
+      link.classList.remove("text-textGreen")
+    });
+    e.currentTarget.classList.add("text-textGreen");
+  }
 
   return (
     <motion.div
@@ -23,7 +40,8 @@ const Navbar = () => {
               <Link
                 key={title}
                 href={url}
-                className='flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
+                onClick={handleScroll}
+                className='nav-link flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
               >
                 <li>
                   <span className="text-textGreen">0{i + 1}. </span>{title}
@@ -37,6 +55,13 @@ const Navbar = () => {
           <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-3 group-hover:translate-x-0 transition-all ease-in-out duration-300'></span>
           <span className='w-full h-[2px] bg-textGreen inline-flex transform translate-x-1 group-hover:translate-x-3 transition-all ease-in-out duration-300'></span>
         </div>
+        {show && (
+          <div
+            ref={(node) => (ref.current = node)}
+          >
+
+          </div>
+        )}
       </div>
     </motion.div>
   )
