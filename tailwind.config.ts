@@ -25,8 +25,8 @@ const config: Config = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyFont: ['Montserrat', 'sans-serif'],
-        titleFont: ['Inter', 'sans-serif'],
+        bodyFont: ['var(--font-montserrat)'],
+        titleFont: ['var(--font-inter)'],
       },
       colors: {
         bodyColor: "#0A192F",
