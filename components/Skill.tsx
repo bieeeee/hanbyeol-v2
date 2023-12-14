@@ -20,7 +20,7 @@ const Skill = ({ m }: any) => {
   return (
     <section
       id='skill'
-      className='max-x-containerxs h-[60vh] py-15 lgl:py-30 mx-auto px-4 flex flex-col justify-start'
+      className='max-x-containerxs h-[75vh] pt-24 mx-auto px-4 flex flex-col justify-start'
     >
       <m.div
         initial="hidden"
