@@ -22,7 +22,7 @@ export const ProjectModalItem = [
     image: <Image src={zapfit} alt="zapfit" />,
     period: '2023/01/25 - 2023/03/11',
     team: 1,
-    role: ['Designed with Figma', 'Deployed', 'Performance'],
+    role: ['Designed UI/UX design with Figma', 'Built a REST API server using Node, Express, and MongoDB', 'Implemented user and administrator authentication with JWT and Context API'],
     gh: '',
   },
   {
@@ -40,7 +40,7 @@ export const ProjectModalItem = [
     image: <Image src={planforyou} alt="planforyou" />,
     period: '2022/11/22 - 2022/12/02',
     team: 3,
-    role: ['Designed and configured database', "Implemented the core feature of automatically generating seating layouts based on guests' seating preferences using the ORTools gem.", 'Developed frontend using JavaScript and Bootstrap'],
+    role: ['Designed and configured database', "Implemented the core feature of automatically generating seating layouts based on guests' seating preferences using the ORTools gem", 'Developed frontend using JavaScript and Bootstrap'],
     gh: 'https://github.com/bieeeee/PLAN4U#readme',
   }
 ]
