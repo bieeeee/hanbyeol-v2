@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
 import { ProjectModalItem } from "./ProjectModalItem";
-import { IoClose } from "react-icons/io5";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { FaRegCalendarAlt } from "react-icons/fa";
-import { FaCode } from "react-icons/fa6";
-import { RiArrowDropRightLine } from 'react-icons/ri';
+import { IoClose } from "@react-icons/all-files/io5/IoClose";
+import { BsFillPeopleFill } from "@react-icons/all-files/bs/BsFillPeopleFill";
+import { FaRegCalendarAlt } from "@react-icons/all-files/fa/FaRegCalendarAlt";
+import { FaCode } from "@react-icons/all-files/fa/FaCode";
+import { RiArrowDropRightLine } from '@react-icons/all-files/ri/RiArrowDropRightLine';
 
 interface ModalProps {
   open: boolean;

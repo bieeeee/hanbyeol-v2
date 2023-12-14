@@ -1,5 +1,4 @@
-import React from 'react'
-import { RiArrowRightSFill } from 'react-icons/ri';
+import { RiArrowRightSFill } from '@react-icons/all-files/ri/RiArrowRightSFill';
 
 const Tools = () => {
   const items = ["Git/Github", "Figma", "Insomnia", "Trello", "Slack"];

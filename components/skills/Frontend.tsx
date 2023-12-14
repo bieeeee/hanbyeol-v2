@@ -1,5 +1,4 @@
-import React from 'react'
-import { RiArrowRightSFill } from "react-icons/ri";
+import { RiArrowRightSFill } from '@react-icons/all-files/ri/RiArrowRightSFill';
 
 const Frontend = () => {
   const items = ["React", "Next", "CSS/SCSS", "Material-UI", "TailwindCSS", "Bootstrap"];
