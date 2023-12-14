@@ -2,7 +2,7 @@ export const ProjectItem = [
   {
     id: "v1",
     title: "Hanbyeol-v1",
-    desc: "My first portfolio website with a Windows 97 theme. I initially began with Create React App but later incorporated ExpressJS for server-side rendering.",
+    desc: "v1.desc",
     stack: ["React", "Express"],
   },
   {
