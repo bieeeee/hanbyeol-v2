@@ -1,0 +1,33 @@
+{
+  "navbar": {
+    "skill": "Skill",
+    "about": "About",
+    "project": "Project",
+    "contact": "Contact"
+  },
+  "hero": {
+    "0": "Hi, my name is ",
+    "1": "Hanbyeol Kwon",
+    "2": ". I'm a",
+    "3": "passionate developer",
+    "4": " who appreciates ",
+    "5": "clean code",
+    "6": " and ",
+    "7": "aesthetic UI design",
+    "8": ". Currently, I'm focused on learning ",
+    "9": "performance optimization techniques",
+    "10": " and exploring ",
+    "11": "new technologies.",
+    "12": ""
+  },
+  "skill": {
+    "title": "Technologies I've worked with",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "tools": "Tools"
+  },
+  "project": {
+    "title": "Things I've built"
+  }
+}

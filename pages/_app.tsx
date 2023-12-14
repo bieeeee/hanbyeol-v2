@@ -1,7 +1,8 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import { Inter, Montserrat } from 'next/font/google'
+import '@/styles/globals.css';
+import type { AppProps } from 'next/app';
+import { Inter, Montserrat } from 'next/font/google';
 import { LazyMotion, m, domAnimation } from 'framer-motion';
+import { appWithTranslation } from 'next-i18next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,7 +14,7 @@ const montserrat = Montserrat({
   display: 'swap',
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <style jsx global>
@@ -30,3 +31,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+export default appWithTranslation(App)
