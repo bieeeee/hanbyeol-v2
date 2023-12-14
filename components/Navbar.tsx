@@ -60,7 +60,7 @@ const Navbar = ({m}:any) => {
               initial={{ x: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.15 }}
-              className='relative w-[50%] h-full overflow-y-scroll scrollbarHide bg-[#112240] flex flex-col items-center px-4 py-10 relative'
+              className='relative w-[50%] h-full overflow-y-scroll scrollbarHide bg-[#112240] flex flex-col items-center justify-center px-4 py-10 relative'
             >
               <IoClose
                 onClick={() => setShow(false)}
@@ -71,7 +71,7 @@ const Navbar = ({m}:any) => {
                   key={title}
                   href={url}
                   onClick={handleScroll}
-                  className='nav-link flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
+                  className='nav-link flex items-center mb-10 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link'
                 >
                   <div className='flex flex-col justify-center items-center'>
                     <span className="text-textGreen">0{i + 1}. </span>
