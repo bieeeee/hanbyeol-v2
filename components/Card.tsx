@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
 import Modal from './Modal';
+import { useTranslation } from 'react-i18next';
 
 export const Card = ({ project }:any) => {
+  const {t} = useTranslation('project');
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<string>('');
   const handleClick = (project:any) => {
@@ -24,7 +26,7 @@ export const Card = ({ project }:any) => {
             {project.title}
           </h2>
           <p className='text-sm mt-3 break-normal'>
-            {project.desc}
+            {t(`${project.desc}`)}
           </p>
         </div>
         <div>

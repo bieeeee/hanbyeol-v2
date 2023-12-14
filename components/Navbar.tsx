@@ -1,13 +1,15 @@
+import { useTranslation } from 'next-i18next';
 import { useState } from 'react';
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 
-const Navbar = ({m}:any) => {
+const Navbar = ({ m }: any) => {
+  const { t } = useTranslation('common');
   const [show, setShow] = useState(false);
   const navItems = [
-    ['About', '#about'],
-    ['Skill', '#skill'],
-    ['Project', '#project'],
-    ['Contact', '#contact'],
+    [t('navbar.about'), '#about'],
+    [t('navbar.skill'), '#skill'],
+    [t('navbar.project'), '#project'],
+    [t('navbar.contact'), '#contact'],
   ];
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();

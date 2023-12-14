@@ -1,5 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 const Hero = ({ m }: any) => {
-  const words = ["Hi, my name is ", "Hanbyeol Kwon", ". I'm a ", "passionate developer", " who appreciates ", "clean code", " and ", "aesthetic UI design", ". Currently, I'm focused on learning ", "performance optimization techniques", " and exploring ", "new technologies."];
+  const { t } = useTranslation('common')
+  const words = [t('hero.0'), t('hero.1'), t('hero.2'), t('hero.3'), t('hero.4'), t('hero.5'), t('hero.6'), t('hero.7'), t('hero.8'), t('hero.9'), t('hero.10'), t('hero.11'), t('hero.12')];
   return (
     <m.section
       initial={{ y: 10, opacity: 0 }}
