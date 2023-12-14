@@ -18,7 +18,7 @@ const Hero = ({ m }: any) => {
                   className='inline text-textDark'
                   initial={{ fontSize: "3rem", color: "#e8eeff" }}
                   animate={{ fontSize: "1.25rem", color: "#8892b0" }}
-                  transition={{ duration: 0.3, delay: 5.1 }}
+                  transition={{ duration: 0.3, delay: 4.76 }}
                 >
                   {word}
                 </m.h1>
