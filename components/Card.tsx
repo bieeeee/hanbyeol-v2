@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { FaRegFolder } from "@react-icons/all-files/fa/FaRegFolder";
 import Modal from './Modal';
 
-export const Card = ({ project }) => {
+export const Card = ({ project }:any) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [selectedProject, setSelectedProject] = useState<string>('');
-  const handleClick = (proejct: any) => {
+  const handleClick = (project:any) => {
     setIsModalOpen(true);
     setSelectedProject(project.id);
   }
