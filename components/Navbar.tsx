@@ -1,4 +1,4 @@
-import { LazyMotion, domAnimation, m } from 'framer-motion';
+import { m } from 'framer-motion';
 import { useRef, useState } from 'react';
 
 const Navbar = () => {
@@ -26,7 +26,6 @@ const Navbar = () => {
   }
 
   return (
-    <LazyMotion features={domAnimation}>
       <m.div
         className='w-full h-15 mdl:h-[9vh] sticky top-0 z-50 bg-bodyColor px-4'
         initial={{ y: -10, opacity: 0 }}
@@ -64,7 +63,6 @@ const Navbar = () => {
           )} */}
         </div>
       </m.div>
-    </LazyMotion>
   )
 }
 

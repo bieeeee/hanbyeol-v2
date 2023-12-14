@@ -1,9 +1,8 @@
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { m } from "framer-motion";
 
 const Hero = () => {
   const words = ["Hi, my name is ", "Hanbyeol Kwon", ". I'm a ", "passionate developer", " who appreciates ", "clean code", " and ", "aesthetic UI design", ". Currently, I'm focused on learning ", "performance optimization techniques", " and exploring ", "new technologies."];
   return (
-    <LazyMotion features={domAnimation}>
       <m.section
         initial={{ y: 10, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -32,7 +31,6 @@ const Hero = () => {
           </div>
         </div>
       </m.section>
-    </LazyMotion>
   )
 }
 
