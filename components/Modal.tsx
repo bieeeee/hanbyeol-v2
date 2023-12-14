@@ -28,7 +28,7 @@ const Modal = ({ open, onClose, project }: ModalProps) => {
             <div className="relative p-9 text-textLight">
               <p className="mb-3">{thisProject?.image}</p>
               <p className="ml-1 text-2xl font-titleFont font-bold tracking-wide text-textGreen text-center">{thisProject?.title}</p>
-              <div className="ml-1 text-xs tracking-wide flex items-end gap-3 mb-3 px-0.5 text-textDark justify-center">
+              <div className="ml-1 text-xs tracking-wide flex items-end gap-3 mb-5 px-0.5 text-textDark justify-center">
                 <div className="flex gap-1 items-center">
                   <BsFillPeopleFill size={13} />
                   {thisProject?.team}
@@ -37,14 +37,14 @@ const Modal = ({ open, onClose, project }: ModalProps) => {
                   <FaRegCalendarAlt size={13} />
                   {thisProject?.period}
                 </div>
-                <div>
+                {thisProject?.gh && <div>
                   <a href={thisProject?.gh} target="_blank">
                     <FaCode size={15} className="text-textGreen" />
                   </a>
-                </div>
+                </div>}
               </div>
               {thisProject?.role.map((item, i) => (
-                <div key={i} className="flex items-start mb-2 text-xs sml:text-base md:text-lg">
+                <div key={i} className="flex items-start text-xs sml:text-base tracking-wide">
                   <p><RiArrowDropRightLine className="text-textGreen" size={27} /></p>
                   <p className="leading-snug">{item}</p>
                 </div>
