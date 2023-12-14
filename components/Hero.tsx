@@ -1,6 +1,4 @@
-import { m } from "framer-motion";
-
-const Hero = () => {
+const Hero = ({m}:any) => {
   const words = ["Hi, my name is ", "Hanbyeol Kwon", ". I'm a ", "passionate developer", " who appreciates ", "clean code", " and ", "aesthetic UI design", ". Currently, I'm focused on learning ", "performance optimization techniques", " and exploring ", "new technologies."];
   return (
       <m.section
@@ -8,7 +6,7 @@ const Hero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
         id='about'
-        className='max-w-contentContainer flex mx-auto h-[85vh] lg:h-[91vh] py-10 mdl:py-24 mdl:px-10 xl:px-4'
+        className='max-w-contentContainer h-[89vh] flex mx-auto mdl:px-10 xl:px-4'
       >
         <div className="flex items-center justify-start">
           <div className="max-w-[800px] mx-auto text-4xl font-bold text-center">

@@ -1,8 +1,7 @@
-import { m } from 'framer-motion';
 import { useState } from 'react';
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 
-const Navbar = () => {
+const Navbar = ({m}:any) => {
   const [show, setShow] = useState(false);
   const navItems = [
     ['About', '#about'],
