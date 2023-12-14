@@ -9,14 +9,14 @@ const Hero = ({ m }: any) => {
       className='max-w-contentContainer h-[89vh] flex mx-auto mdl:px-10 xl:px-4'
     >
       <div className="flex items-center justify-start">
-        <div className="max-w-[800px] mx-auto text-5xl font-bold text-center">
+        <div className="max-w-[800px] mx-auto font-bold text-center">
           <div>
             {words.map((word, i) => (
               (i % 2 === 0) ?
                 <m.h1
                   key={word}
-                  className='inline text-textDark'
-                  initial={{ fontSize: "3rem", color: "#e8eeff" }}
+                  className='inline text-textDark text-3xl sml:text-5xl'
+                  initial={{ color: "#e8eeff" }}
                   animate={{ fontSize: "1.25rem", color: "#8892b0" }}
                   transition={{ duration: 0.3, delay: 4.76 }}
                 >
@@ -28,7 +28,7 @@ const Hero = ({ m }: any) => {
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.35 * (i) }}
                   key={word}
-                  className='inline text-[#e8eeff]'
+                  className='inline text-[#e8eeff] text-3xl sml:text-5xl'
                 >
                   {word}
                 </m.h1>
