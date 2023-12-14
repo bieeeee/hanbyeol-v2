@@ -12,13 +12,16 @@ export default function Home({ m }: any) {
       <Head>
         <title>Hanbyeol Kwon | Full-stack Developer</title>
       </Head>
-      <Navbar m={m} />
-      <div className="w-full mx-auto flex flex-col p-4">
-        <Hero m={m} />
-        <Skill m={m} />
-        <Project m={m} />
-        <Contact m={m} />
-      </div>
+      <main className="w-full h-screen overflow-x-hidden overflow-y-scroll font-bodyFont bg-bodyColor  text-textLight">
+        <Navbar m={m} />
+        <div className="w-full mx-auto flex flex-col p-4">
+          <Hero m={m} />
+          <Skill m={m} />
+          <Project m={m} />
+          <Contact m={m} />
+        </div>
+      </main>
+      <div id="global-modal"></div>
     </>
   )
 }
