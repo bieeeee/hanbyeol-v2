@@ -9,31 +9,29 @@ const Hero = ({ m }: any) => {
       className='max-w-contentContainer h-[89vh] flex mx-auto mdl:px-10 xl:px-4'
     >
       <div className="flex items-center justify-start">
-        <div className="max-w-[800px] mx-auto font-bold text-center">
-          <div>
-            {words.map((word, i) => (
-              (i % 2 === 0) ?
-                <m.h1
-                  key={word}
-                  className='inline text-textDark text-3xl sml:text-5xl'
-                  initial={{ color: "#e8eeff" }}
-                  animate={{ fontSize: "1.25rem", color: "#8892b0" }}
-                  transition={{ duration: 0.3, delay: 4.76 }}
-                >
-                  {word}
-                </m.h1>
-                :
-                <m.h1
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.35 * (i) }}
-                  key={word}
-                  className='inline text-[#e8eeff] text-3xl sml:text-5xl'
-                >
-                  {word}
-                </m.h1>
-            ))}
-          </div>
+        <div className="max-w-[800px] mx-auto text-3xl sml:text-5xl font-bold text-center">
+          {words.map((word, i) => (
+            (i % 2 === 0) ?
+              <m.h1
+                key={word}
+                className='inline'
+                initial={{ fontSize: "100%", color: "#e8eeff" }}
+                animate={{ fontSize: "50%", color: "#8892b0" }}
+                transition={{ duration: 0.3, delay: 4.76 }}
+              >
+                {word}
+              </m.h1>
+              :
+              <m.h1
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.35 * (i) }}
+                key={word}
+                className='inline text-[#e8eeff]'
+              >
+                {word}
+              </m.h1>
+          ))}
         </div>
       </div>
     </m.section>
