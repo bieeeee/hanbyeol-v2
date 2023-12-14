@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
-      <main className={`${inter.variable} ${montserrat.variable}`}>
+      <main className={`${inter.variable} ${montserrat.variable} w-full font-bodyFont bg-bodyColor text-textLight`}>
         <Component {...pageProps} />
       </main>
     )
