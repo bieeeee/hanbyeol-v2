@@ -14,13 +14,13 @@ const Contact = ({ m }: any) => {
         variants={inView}
       >
         <p className="mb-7 font-titleFont text-lg text-textGreen font-semibold text-center tracking-wide">
-          04. Let's Connect!
+          {`04. Let's Connect!`}
         </p>
         <p className="max-w-containerxs mb-2 text-3xl font-bold text-center text-textLight">
-          I'm always up for fun and quirky projects!
+          {`I'm always up for fun and quirky projects!`}
         </p>
         <p className="max-w-containerxs text-xl font-semibold text-center text-textDark mb-7">
-          Let's chat about potential collaborations or explore networking opportunities.
+          {`Let's chat about potential collaborations or explore networking opportunities.`}
         </p>
         <div className="flex gap-3">
           <a href="https://www.linkedin.com/in/hanbyeol-kwon/" target="_blank">
