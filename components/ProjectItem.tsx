@@ -2,13 +2,25 @@ export const ProjectItem = [
   {
     id: "v1",
     title: "Hanbyeol-v1",
-    desc: "sfdsfdsasdfdsfa",
-    stack: ["React", "Express", "Heroku"],
+    desc: "My first portfolio website with a Windows 97 theme. I initially began with Create React App but later incorporated ExpressJS for server-side rendering.",
+    stack: ["React", "Express"],
   },
   {
-    id: "v2",
-    title: "Hanbyeol-v2",
-    desc: "sfdsfdsasdfdfsdfasdfsfa",
-    stack: ["Next", "TailwindCSS", "TypeScript"],
+    id: "zapfit",
+    title: "Zapfit",
+    desc: "Freelance project for a personal training business initially built with RoR and PostgreSQL. Later rebuilt with the MERN stack due to PostgreSQL costs on Heroku.",
+    stack: ["Node", "Express", "MongoDB", "React"],
+  },
+  {
+    id: "only",
+    title: "OnlyDevs",
+    desc: "Platform web application that connects junior and senior developers to facilitate networking and career guidance. 2023 Ruby on Rails hackathon project.",
+    stack: ["Rails", "PostgreSQL", "TailwindCSS"],
+  },
+  {
+    id: "plan",
+    title: "Plan For You",
+    desc: "Seating chart generator utilizing guests' preferences selected via personalized invitations.",
+    stack: ["Rails", "PostgreSQL", "Bootstrap"],
   }
 ]
