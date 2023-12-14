@@ -5,7 +5,7 @@ import { inView } from './motion'
 
 const Project = ({ m }: any) => {
   return (
-    <section id='project' className='max-w-contentContainer h-[89vh] py-10 lgl:py-24 mx-auto px-4 py-24'>
+    <section id='project' className='max-w-contentContainer h-full py-20 lgl:py-24 mx-auto px-10'>
       <m.div
         initial="hidden"
         whileInView="visible"
@@ -13,7 +13,7 @@ const Project = ({ m }: any) => {
         variants={inView}
       >
         <SectionTitle title="Things I've built" titleNo="03" className='' />
-        <div className='grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-6 mt-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lgl:grid-cols-3 gap-5 mt-10'>
           {ProjectItem.map((item) => (
             <Card key={item.id} project={item} />
           ))}
