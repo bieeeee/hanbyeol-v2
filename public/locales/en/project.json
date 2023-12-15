@@ -6,12 +6,21 @@
     "2": "Implemented multi-language support using react-i18n"
   },
   "zapfit": {
-    "desc": "Freelance project for a personal training business initially built with RoR and PostgreSQL. Later rebuilt with the MERN stack due to PostgreSQL costs on Heroku."
+    "desc": "Freelance project for a personal training business initially built with RoR and PostgreSQL. Later rebuilt with the MERN stack due to PostgreSQL costs on Heroku.",
+    "0": "Designed UI/UX design with Figma",
+    "1": "Built a REST API server using Node, Express, and MongoDB",
+    "2": "Implemented user and administrator authentication with JWT and Context API"
   },
   "only": {
-    "desc": "Platform web application that connects junior and senior developers to facilitate networking and career guidance. 2023 Ruby on Rails hackathon project."
+    "desc": "Platform web application that connects junior and senior developers to facilitate networking and career guidance. 2023 Ruby on Rails hackathon project.",
+    "0": "Designed database schema",
+    "1": "Implemented a bulletin board and comment section within the user profile",
+    "2": "Designed UI using Figma and developed responsive web with TailwindCSS"
   },
   "plan": {
-    "desc": "Seating chart generator utilizing guests' preferences selected via personalized invitations."
+    "desc": "Seating chart generator utilizing guests' preferences selected via personalized invitations.",
+    "0": "Designed and configured database",
+    "1": "Implemented the core feature of automatically generating seating layouts based on guests' seating preferences using the ORTools gem",
+    "2": "Developed frontend using JavaScript and Bootstrap"
   }
 }
