@@ -4,8 +4,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   openAnalyzer: true,
 });
 
+const { i18n } = require('./next-i18next.config')
+
 const nextConfig = {
   reactStrictMode: true,
+  i18n,
   webpack: (config, { isServer }) => {
     if (!isServer) {
       Object.assign(config.resolve.alias, {
