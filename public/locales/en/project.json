@@ -1,10 +1,17 @@
 {
   "v1": {
-    "title": "Hanbyeol-v1",
     "desc": "My first portfolio website with a Windows 97 theme. I initially began with Create React App but later incorporated ExpressJS for server-side rendering.",
-    "stack": {
-      "react": "React",
-      "express": "Express"
-    }
+    "0": "Improved performance through image optimization, page layout redesign, and code splitting with lazy/dynamic loading, boosting Lighthouse score from 66 to 90",
+    "1": "Switched from CSR to SSR using Express, resulting in a 2x reduction in initial loading speed",
+    "2": "Implemented multi-language support using react-i18n"
+  },
+  "zapfit": {
+    "desc": "Freelance project for a personal training business initially built with RoR and PostgreSQL. Later rebuilt with the MERN stack due to PostgreSQL costs on Heroku."
+  },
+  "only": {
+    "desc": "Platform web application that connects junior and senior developers to facilitate networking and career guidance. 2023 Ruby on Rails hackathon project."
+  },
+  "plan": {
+    "desc": "Seating chart generator utilizing guests' preferences selected via personalized invitations."
   }
 }

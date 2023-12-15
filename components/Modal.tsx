@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+import { useTranslation } from "react-i18next";
 import { ProjectModalItem } from "./ProjectModalItem";
 import { IoClose } from "@react-icons/all-files/io5/IoClose";
 import { BsFillPeopleFill } from "@react-icons/all-files/bs/BsFillPeopleFill";
@@ -13,9 +14,9 @@ interface ModalProps {
 }
 
 const Modal = ({ open, onClose, project }: ModalProps) => {
+  const { t } = useTranslation('project');
   if (!open) return null;
   const thisProject = ProjectModalItem.find((item) => (item.id === project));
-
   return ReactDOM.createPortal(
     <>
       <div key={thisProject?.id} className="flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -46,7 +47,7 @@ const Modal = ({ open, onClose, project }: ModalProps) => {
               {thisProject?.role.map((item, i) => (
                 <div key={i} className="flex items-start text-xs sml:text-base tracking-wide">
                   <p><RiArrowDropRightLine className="text-textGreen" size={27} /></p>
-                  <p className="leading-snug">{item}</p>
+                  <p className="leading-snug">{t(`${item}`)}</p>
                 </div>
               ))}
             </div>
