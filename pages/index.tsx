@@ -12,6 +12,7 @@ export default function Home({ m }: any) {
     <>
       <Head>
         <title>Hanbyeol Kwon | Full-stack Developer</title>
+        <meta name="description" content="Hanbyeol Kwon | Full-stack Developer" />
       </Head>
       <main className="w-full h-screen overflow-x-hidden overflow-y-scroll font-bodyFont bg-bodyColor  text-textLight">
         <Navbar m={m} />
