@@ -2,8 +2,10 @@ import { inView } from "./motion"
 import { SiLinkedin } from "@react-icons/all-files/si/SiLinkedin";
 import { IoLogoGithub } from "@react-icons/all-files/io5/IoLogoGithub";
 import { HiOutlineMail } from "@react-icons/all-files/hi/HiOutlineMail";
+import { useTranslation } from "react-i18next";
 
 const Contact = ({ m }: any) => {
+  const { t } = useTranslation('common');
   return (
     <section id='contact' className='max-w-contentContainer h-[80vh] mx-auto flex items-center justify-center'>
       <m.div
@@ -14,13 +16,13 @@ const Contact = ({ m }: any) => {
         variants={inView}
       >
         <p className="mb-7 font-titleFont text-lg text-textGreen font-semibold text-center tracking-wide">
-          {`04. Let's Connect!`}
+          {t('contact.title')}
         </p>
         <p className="max-w-containerxs mb-2 text-3xl font-bold text-center text-textLight">
-          {`I'm always up for fun and quirky projects!`}
+          {t('contact.head')}
         </p>
-        <p className="max-w-containerxs text-xl font-semibold text-center text-textDark mb-7">
-          {`Let's chat about potential collaborations or explore networking opportunities.`}
+        <p className="max-w-[250px] sml:max-w-[450px] text-sm sml:text-lg text-center text-textDark mb-7">
+          {t('contact.body')}
         </p>
         <div className="flex gap-3">
           <a href="https://www.linkedin.com/in/hanbyeol-kwon/" target="_blank">
